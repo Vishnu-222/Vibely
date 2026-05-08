@@ -2,6 +2,7 @@ const express = require("express");
 const postController = require("../controllers/post.controller")
 const multer = require("multer")
 const upload = multer({ storage: multer.memoryStorage() })
+const identifyUser = require("../middlewares/auth.middleware");
 
 const postRouter = express.Router();
 
@@ -10,19 +11,19 @@ const postRouter = express.Router();
  * @description to create a post for the user who request
  * - req.body = { caption , image-file }
  */
-postRouter.post("/" , upload.single("image"), postController.createPostController);
+postRouter.post("/" , upload.single("image"), identifyUser ,postController.createPostController);
 
 /**
  * @route /api/posts/ [protected] -- GET METHOD
  * @description to get all the post created by the user who request 
  */
-postRouter.get("/", postController.getPostController);
+postRouter.get("/", identifyUser , postController.getPostController);
 
 /**
  * @route /api/posts/details/:postid  -- GET METHOD
  * @description return an detail about specific post with the id. Also check whether the post belongs to the user that the request come from
  */
-postRouter.get("/details/:postId", postController.getPostDetailsController);
+postRouter.get("/details/:postId", identifyUser , postController.getPostDetailsController);
 
 
 module.exports = postRouter;
