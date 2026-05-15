@@ -1,0 +1,14 @@
+@use "./global.scss" as *;
+
+button {
+  background-color: $primary2-color;
+  color: $text-color;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import AppRoutes from './AppRoutes'
-import "./style.scss"
-import {AuthProvider} from "./features/auth/Auth.context.jsx"
+import {RouterProvider} from "react-router-dom"
+import {router} from "./app.routes.jsx"
+import "./features/shared/global.scss"
+import {AuthProvider} from "./features/auth/auth.context.jsx"
 
 function App() {
 
   return (
     <AuthProvider>
-      <AppRoutes />
+      <RouterProvider router = {router}/>
     </AuthProvider>
   )
 }
