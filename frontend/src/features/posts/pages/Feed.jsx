@@ -5,7 +5,7 @@ import Post from "../components/Post";
 import Nav from "../../shared/components/Navbar"
 
 const Feed = () => {
-  const { feed, handleGetFeed, loading } = usePost();
+  const { feed, handleGetFeed, loading, handleLike, handleUnLike} = usePost();
 
   useEffect(() => {
     handleGetFeed();
@@ -25,7 +25,7 @@ const Feed = () => {
       <Nav />
         <div className="posts">
           {feed.map((post, idx) => {
-            return <Post key={idx} user={post.user} post={post} />;
+            return <Post key={idx} user={post.user} post={post} loading={loading} handleLike={handleLike}  handleUnLike={handleUnLike} />;
           })}
         </div>
       </div>
