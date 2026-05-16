@@ -42,6 +42,7 @@ const Register = () => {
             name="username"
             id='username'
             placeholder="Enter username"
+            className="text-field"
           />
           <input
             onInput={(e) => {
@@ -51,6 +52,7 @@ const Register = () => {
             name="email"
             id="email"
             placeholder="Enter email"
+            className="text-field"
           />
           <input
             onInput={(e) => {
@@ -60,6 +62,7 @@ const Register = () => {
             name="password"
             id="password"
             placeholder="Enter password"
+            className="text-field"
           />
           <button>Register</button>
         </form>

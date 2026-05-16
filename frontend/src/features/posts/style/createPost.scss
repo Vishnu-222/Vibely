@@ -1,0 +1,12 @@
+@use "../../shared/global.scss" as *;
+
+.post-image-label {
+  background-color: $secondary2-color;
+  color: $background2-color;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: fit-content;
+}
+

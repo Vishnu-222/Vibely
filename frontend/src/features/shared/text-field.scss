@@ -1,0 +1,8 @@
+@use "../shared/global.scss" as *;
+
+.text-field {
+  background-color: $secondary-color;
+  color:  $background2-color;
+  font-family: cursive;
+  font-size: 1rem;
+}
