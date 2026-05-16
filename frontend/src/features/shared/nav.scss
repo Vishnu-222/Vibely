@@ -1,0 +1,19 @@
+@use "../shared/global.scss" as *;
+@use "./button.scss";
+@use "./text-field.scss";
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+
+    p{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $secondary-color;
+        user-select: none;
+        cursor: pointer;
+    }
+}

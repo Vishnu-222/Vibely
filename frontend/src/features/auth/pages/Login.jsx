@@ -43,6 +43,7 @@ const Login = () => {
             name="username"
             id='username'
             placeholder="Enter username"
+            className="text-field"
           />
           <input
             onInput={(e) => {
@@ -52,6 +53,7 @@ const Login = () => {
             name="password"
             id='password'
             placeholder="Enter password"
+            className="text-field"
           />
           <button type="submit">Login</button>
         </form>

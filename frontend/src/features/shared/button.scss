@@ -7,8 +7,15 @@ button {
   font-weight: 700;
   font-size: 0.9rem;
   transition: all 0.3s ease-in-out;
+  padding-inline: 0.8rem;
+  padding-block : 0.5rem;
+  border-radius: 1rem;
+  border : none;
+  outline: none;
 
   &:active {
     transform: scale(0.95);
   }
 }
+
+
